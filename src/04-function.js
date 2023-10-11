@@ -24,7 +24,7 @@ function greetUser(name) {
  */
 
 function toSpinalCase(str) {
-    const array = str.toLowerCase().split(' ');
+    const array = str.split(' ');
     return array.join("-");
 }
 
