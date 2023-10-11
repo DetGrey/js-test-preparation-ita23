@@ -8,7 +8,11 @@
  * console.log(myBook.title); // Outputs the title of the book
  */
 function createBook() {
-
+    return {
+        title: 'Alanna: The First Adventure',
+        author: 'Tamora Pierce',
+        year: 1983
+    }
 }
 
 
@@ -24,9 +28,13 @@ function createBook() {
  * console.log(result); // Outputs {title: "Sample", author: "John Doe", year: 2020}
  */
 function findBookByAuthor(books, author) {
-
+    for (let book of books) {
+        if (author === book.author) {
+            return book;
+        }
+    }
+    return null;
 }
-
 
 /**
  * This function lists all book titles published before a given year.
@@ -40,6 +48,11 @@ function findBookByAuthor(books, author) {
  * console.log(oldBooks); // Outputs {title: "A", year: 1990}
  */
 function getOlderBooks(books, year) {
-
+    const oldBooks = [];
+    for (let book of books) {
+        if (book.year < year) {
+            oldBooks.push(book);
+        }
+    }
+    return oldBooks;
 }
-

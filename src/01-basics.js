@@ -10,7 +10,11 @@
  * const anotherResult = add(-1, 1); // anotherResult will be 0
  */
 function add(a, b) {
-
+    if (a + b === 0) {
+        return 0
+    } else {
+        return a + b;
+    }
 }
 
 /**
@@ -24,7 +28,11 @@ function add(a, b) {
  * const anotherResult = determineLength("AB"); // anotherResult will be 2
  */
 function determineLength(value) {
-
+    if (value.length === 0) {
+        return 0;
+    } else {
+        return value.length;
+    }
 }
 
 /**
@@ -39,6 +47,6 @@ function determineLength(value) {
  * const result = concatenateWithDelimiter("Hello", "World", ", "); // result will be "Hello, World"
  */
 function concatenateWithDelimiter(a, b, delimiter) {
-
+    return a.concat(delimiter, b);
 }
 

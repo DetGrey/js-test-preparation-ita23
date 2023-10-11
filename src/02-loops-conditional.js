@@ -10,9 +10,12 @@
  */
 
 function getNextEven(n) {
-
+    if (n % 2 === 0) {
+        return n + 2;
+    } else {
+        return n + 1;
+    }
 }
-
 
 /**
  * This function checks if a number is a multiple of another number.
@@ -27,9 +30,8 @@ function getNextEven(n) {
  */
 
 function isMultipleOf(n, m) {
-
+    return n % m === 0;
 }
-
 
 /**
  * This function reverses a string.
@@ -43,5 +45,9 @@ function isMultipleOf(n, m) {
  */
 
 function reverseString(str) {
-
+    if (str.length === 0) {
+        return str;
+    } else {
+        return str.split('').reverse().join('');
+    }
 }
